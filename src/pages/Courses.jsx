@@ -144,6 +144,7 @@ const Courses = () => {
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
+        maskClosable={false}
       >
         <Form
           {...layout}

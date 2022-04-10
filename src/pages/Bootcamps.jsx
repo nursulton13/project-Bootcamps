@@ -16,6 +16,7 @@ import { deleteData, getData, postData, putData } from "../server/common";
 import "./style.css";
 import { Loading3 } from "../loading/Loading3";
 import TextArea from "antd/lib/input/TextArea";
+import { Loading4 } from "../loading/loading4";
 
 const columns = [
   {
@@ -174,7 +175,7 @@ const Bootcamps = () => {
         rowKey="id"
         columns={columns}
         dataSource={data}
-        loading={data.length === 0 ? Loading3 : false}
+        loading={data.length === 0 ? Loading4 : false}
       />
 
       <Modal
@@ -182,6 +183,7 @@ const Bootcamps = () => {
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
+        maskClosable={false}
       >
         <Form
           {...layout}

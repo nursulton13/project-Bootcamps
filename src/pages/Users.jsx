@@ -1,7 +1,7 @@
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 import { Button, Divider, Form, Input, Modal, Radio, Table } from "antd";
 import React, { useEffect, useState } from "react";
-import { Loading2 } from "../loading/Loading2";
+import { Loading3 } from "../loading/Loading3";
 import { deleteData, getData, postData, putData } from "../server/common";
 import "./style.css";
 
@@ -118,7 +118,7 @@ const Users = () => {
         rowKey="_id"
         columns={columns}
         dataSource={data}
-        loading={data.length === 0 ? Loading2 : false}
+        loading={data.length === 0 ? Loading3 : false}
       />
 
       <Modal
@@ -126,6 +126,7 @@ const Users = () => {
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
+        maskClosable={false}
       >
         <Form {...layout} form={form} name="user">
           <Form.Item
